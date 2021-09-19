@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+		xmlns:h="http://xmlns.jcp.org/jsf/html"
+		xmlns:f="http://java.sun.com/jsf/core"
+		xmlns:jsf="http://xmlns.jcp.org/jsf">
+	<head>
+		<title>Ejemplo Resource Bundle</title>
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td><h:outputText value="#{bundle.msg1}"></h:outputText></td>
+			</tr>
+			<tr>
+				<td><h:outputText value="#{bundle['msg2.subitem']}"></h:outputText></td>
+			</tr>
+			<tr>
+				<td><h:outputText value="-> Escape TRUE: #{bundle['msg3.escape']}"></h:outputText></td>
+			</tr>
+			<tr>
+				<td><h:outputText value="-> Escape FALSE: #{bundle['msg3.escape']}" escape="false"></h:outputText></td>
+			</tr>
+			<tr>
+				<td>
+					<h:outputFormat value="#{bundle['msg4.param']}">
+						<f:param value="TECLADO" />
+					</h:outputFormat>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
